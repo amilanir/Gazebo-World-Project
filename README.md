@@ -1,64 +1,69 @@
-[![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
+# Gazebo-World-Project
 
-# RoboND-myrobot
-The **myrobot** lab part of RoboND Gazebo Basics lesson. The purpose of this lab is to learn how to build a two-wheeled robot model with the Model Editor tool in Gazebo. Include this model in an empty Gazebo World. And, finally write a plugin to interact with this world.  
+In this project I designed a Gazebo World environment by including multiple models to include an office space and robots. A cuatomized plugin is written to interact with the gazebo world.
 
-### Directory Structure
+1. Build a single floor wall structure using the Building Editor tool in Gazebo. Apply at least one feature, one color, and optionally one texture to your structure. Make sure there's enough space between the walls for a robot to navigate.
+2. Model any object of your choice using the Model Editor tool in Gazebo. Your model links should be connected with joints.
+3. Import your structure and two instances of your model inside an empty Gazebo World.
+4. Import at least one model from the Gazebo online library and implement it in your existing Gazebo world.
+5. Write a C++ World Plugin to interact with your world. Your code should display “Welcome to ’s World!” message as soon as you launch the Gazebo world file.
+
+## Directory Structure
 ```
-    .myrobot                           # myrobot lab main folder 
-    ├── images                         # Code output image                   
-    │   ├── output.png
-    ├── model                          # Model files of the two-wheeled robot
-    │   ├── robot
-    │   │   ├── model.config
-    │   │   ├── model.sdf
-    ├── script                         # Gazebo World plugin C++ script      
-    │   ├── hello.cpp
-    ├── world                          # Gazebo main World empty scene
-    │   ├── myworld
-    ├── CMakeLists.txt                 # Link libraries 
-    └──                              
+    .Project1                             # Build My World Project 
+       ├── model                          # Model files 
+       │   ├── Building
+       │   │   ├── model.config
+       │   │   ├── model.sdf
+       │   ├── HumanoidRobot
+       │   │   ├── model.config
+       │   │   ├── model.sdf
+       ├── script                         # Gazebo World plugin C++ script      
+       │   ├── welcome_message.cpp
+       ├── world                          # Gazebo main World containing models 
+       │   ├── UdacityOffice.world
+       ├── CMakeLists.txt                 # Link libraries 
+       └──                                                         
 ```
 
-### Steps to launch the simulation
+## Steps to launch the simulation
 
-#### Step 1 Update and upgrade the Workspace image
+### Step 1 Update and upgrade the Workspace image
 ```sh
-$ sudo apt-get update
-$ sudo apt-get upgrade -y
+$ sudo apt-get update && sudo apt-get upgrade -y
 ```
 
-#### Step 2 Clone the lab folder in /home/workspace/
+### Step 2 Clone the lab folder in /home/workspace/
 ```sh
 $ cd /home/workspace/
-$ git clone https://github.com/udacity/RoboND-myrobot myrobot
+$ git clone https://github.com/amilanir/Gazebo-World-Project/
 ```
 
-#### Step 3 Compile the code
+### Step 3 Compile the code
 ```sh
-$ cd /home/workspace/myrobot/
+$ cd /home/workspace/Gazeb0-World-Project/
 $ mkdir build
 $ cd build/
 $ cmake ../
 $ make
 ```
 
-#### Step 4 Add the library path to the Gazebo plugin path  
+### Step 4 Add the library path to the Gazebo plugin path  
 ```sh
-$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/myrobot/build
+$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/Gazebo-World-Project/build
 ```
 
-#### Step 5 Run the Gazebo World file  
+### Step 5 Run the Gazebo World file  
 ```sh
-$ cd /home/workspace/myrobot/world/
-$ gazebo myworld
+$ cd /home/workspace/Gazebo-World-Project/world/
+$ gazebo myofficeworld
 ```
 
 ### Output
-The hello world message and the two-wheeled robot inside a Gazebo World should both launch as follow: 
+The cutomize welcome  message will be displayed and the robot inside a Gazebo office world will launch as shown below. 
 
 ![Overview](/media/Amila's_Office.png) 
 
     
  
-# Gazebo-World-Project
+
