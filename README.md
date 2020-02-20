@@ -62,7 +62,7 @@ $ gazebo myofficeworld
 ### Output
 The cutomize welcome  message will be displayed and the robot inside a Gazebo office world will launch as shown below. 
 
-![Overview](/media/Amila's_Office.png) 
+![Overview](/media/Amila's_Office_Updated.png) 
 
     
  
